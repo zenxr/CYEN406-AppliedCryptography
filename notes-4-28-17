@@ -1,0 +1,58 @@
+metrics is important with AES
+	block size 128
+
+
+today's lecture: HTTPS : ssl/tls
+	pkc
+	symmetric
+	certificate - digital signature
+	mac
+HTTPS
+SSL?
+	privacy
+	authentication
+	integrity
+
+	verifying certificate:
+		has experiation date - expired? been revoked?
+		url, domain, or host? possible to sign only a single sub-domain
+
+
+
+		client							server
+		==========================================
+		https ------sends request----->
+
+			  <----public key cert-----
+
+			  =====verify certificate===
+
+			  ----generate priv key--->
+
+
+	goals:
+		cryptographic security
+		interoperability
+		extensibility
+		relative efficiency <- obtained through cache mechanism
+			if I have a session key, should we re-use it or generate new?
+
+
+HTTPS
+TLS
+	TLS handshake protocol
+		client							server 		Description
+		========================================	============================================
+				-----clientHello------->			includes browser, IP, ssl ver, etc etc
+
+				<-----serverHelloCert---			serverHelloCert includes public key
+														fields : hostname, expir date, issue date, who signed
+				------encrSymKey------->			send key encrypted w/ servers public key
+
+				<----ApplicationData--->
+
+
+
+
+	TLS record protocol
+

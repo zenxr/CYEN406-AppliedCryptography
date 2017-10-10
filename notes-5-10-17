@@ -1,0 +1,18 @@
+attacks on cryptosystem
+    -> cipher text only
+    -> known plaintext
+    -> chosen plaintext
+
+cipher text only
+    -> only the ciphertext is known
+    -> only on simple algorithms
+known plaintext
+    -> could potentially be used on anything
+    -> most effective on simple algorithms
+    -> have ciphertext and plaintext, even if only portion, and analyze
+chosen plaintext
+    -> could potentially be used on anything
+    -> works best on small data
+    -> choose plaintext to try and achieve a known plaintext
+        -> looking for key on a small number
+    HOW CAN YOU USE CHOSEN PLAINTEXT ATTACK TO BREAK RSA? THIS

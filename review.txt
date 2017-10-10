@@ -1,0 +1,83 @@
+one time pad is only known conditionally secure algorithm
+	false -> RSA ... etc
+	one time pad is unconditionally secure
+
+homophonic cipher -> a --> multiple characters/symbols
+to encrypt, use public key of reciever
+hash != ciphertext
+Diphie-Hellman is for key exchange, it doesn't encrypt/decrypt anything
+example of authentication protocol :
+	hash, etc
+Signer can use their private key
+#8 = key crunching, not key scrambling
+#9 = 
+
+
+
+
+REVIEW DAY
+=============================================================================
+DES?
+64-bit -> pc-1 -> 56-bit
+	split into 2 halves -> 28 (Co) and 28 (Do)
+		left shift table -> 16 subkeys (56 bit and the two Co and Do)
+			pass these 3 to pc-2 (=48 bit key)
+message length : atleast 64, each block must be 64(if not full 64, then pad)
+pass this message to ip-table (results in scrambled message)
+	ip-table splits into two halves (lo and ro)
+	ln = r(sub)n-1
+	rn=l(sub)n-1 -> f(r(sub)n-1*K(sub)n)
+
+	r0 : 32-bit
+	run r0 through E-bit selection table -> 48-bit
+
+EXAM REVIEW STARTS
+	if you know the stuff on review, you will pass but not 100
+	foundation: it is not helpful to keep your algorithm secret
+	XOR is theoretically secure
+	symmetric cryptography -> what is it, hows it work
+	substitution cipher -> either keyword, veg (improbable), or caesar to solve
+	asymmetric -> when use? advantages...something else
+	when would you use symmetric over asymmetric, vice cersa?
+	hash collision, has function properties
+	MAC - message authentication code
+		used for emails
+	protocols -> 3 types
+		arbitrated
+		self enforcing
+		adjucated
+	how can you use hash chaining 
+		if someone new comes in previous person should be validated? or invalidated?
+	hybrid crypto -> person encrypts message with person B's public key, B unencrypts with their private
+		https <-- example of hybrid
+	digital signatures : can you sign with only symmetric key? yes with arbitrator
+	can you sign a document using symmetric key? yes, if you use private key
+		inefficient to decrpyt with symmetric
+	how would you have multiple signatures on data? each person encrypts the hash seperately (probably asked)
+	how to digitally sign and encrypt data (WILL BE ON)
+		encrypt using private key
+		unencrypt using signers public key
+	undenyable digital signatures:
+		1)	can't refute that I signed
+		2)	only specificly authenticated people can use it
+	random - is anything really random? no
+		pseudo - passes math tests
+		real - unpredictable and unreproducible
+		cryptographic randoms - unpredictable pseudo randoms
+	birthday attack - two people with common birthday is more likely than finding someone with specific birthday
+		birthday paradox !
+	if everything about your algorithm is known, how do you ensure system is secure? keys
+	performance wise, longer keys are harder to decrypt; balance between key length for security and computation
+	transport and ___ protocols
+	naive approach for key distribution : solved by KDC key distribution center
+		# keys greatly reduced
+	Merkle's puzzle
+		very very slow, have to bruteforce 1x message
+	diffie helman
+		know algorithm
+	rsa rsa rsa
+		given public or private be able to show encrypted/decrypted messages
+	no elliptic curve or des
+
+
+	fill in the blank, true or false, short answer questions, long answer questions
